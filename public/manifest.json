@@ -1,0 +1,18 @@
+{
+  "name": "Smart MBG Waste & Inventory Management",
+  "short_name": "SmartMBGWaste",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#10b981",
+  "orientation": "any",
+  "description": "Program Makan Bergizi Gratis Smart Inventory and Food Waste Tracking System",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3075/3075977.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

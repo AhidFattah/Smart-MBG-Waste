@@ -6,18 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    public function up()
-    {
+    public function up(): void
+{
         Schema::create('menus', function (Blueprint $table) {
-            $table->id();
-            $table->string('menu_code')->unique();
-            $table->string('menu_name');
-            $table->integer('calories')->default(0);
-            $table->timestamps();
-        });
+        $table->id();
+        $table->string('menu_code');
+        $table->string('menu_name');
+        $table->integer('calories');
+        $table->timestamps();
+    });
     }
 
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('menus');
     }

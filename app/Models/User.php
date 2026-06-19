@@ -15,6 +15,7 @@ class User extends Authenticatable
         'email',
         'password',
         'role',
+        'role_id',
         'school_id',
     ];
 
@@ -27,5 +28,11 @@ class User extends Authenticatable
     public function school()
     {
         return $this->belongsTo(School::class, 'school_id');
+    }
+
+    // Relasi Ke Tabel Peran (Role)
+    public function roleModel()
+    {
+        return $this->belongsTo(Role::class, 'role_id');
     }
 }

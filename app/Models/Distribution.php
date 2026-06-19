@@ -9,7 +9,21 @@ class Distribution extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['distribution_date', 'school_id', 'menu_id', 'qty_sent', 'status'];
+    protected $fillable = [
+        'tanggal_distribusi',
+        'school_id',
+        'menu_id',
+        'total_porsi_dikirim',
+        'status_pengiriman',
+        'jumlah_siswa_hadir',
+        'persentase_cadangan',
+        'kendaraan_distribusi',
+        'petugas_distribusi',
+        'waktu_distribusi',
+        'qr_code_surat_jalan',
+        'waktu_diterima',
+        'penerima_nama'
+    ];
 
     public function school()
     {
@@ -24,5 +38,10 @@ class Distribution extends Model
     public function wasteLog()
     {
         return $this->hasOne(WasteLog::class, 'distribution_id');
+    }
+
+    public function foodWaste()
+    {
+        return $this->hasOne(FoodWaste::class, 'distribution_id');
     }
 }
